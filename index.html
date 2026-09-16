@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VW Group — Circuito productivo</title>
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--text:#1c1c1a;--text2:#6b6b66;--text3:#9c9a92;--border:#ddd;--gen:#4338a8;--esp:#c74b22;--int:#0a6b4f;--jv:#a06510;--fil:#6b6b66;--bom:#0a6b4f;--est:#a06510;--sans:Inter,-apple-system,system-ui,sans-serif;--mono:'JetBrains Mono',monospace;--radius:6px}
+@media(prefers-color-scheme:dark){:root{--bg:#161615;--card:#1e1e1c;--text:#e0dfd8;--text2:#9c9a92;--text3:#6b6b66;--border:#333;--gen:#9b93e8;--esp:#f09070;--int:#5dc8a0;--jv:#f0c060;--fil:#9c9a92;--bom:#5dc8a0;--est:#f0c060}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow:hidden;height:100vh;display:flex;flex-direction:column}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+header{padding:10px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:14px;flex-shrink:0;background:var(--card)}
+header h1{font-size:15px;font-weight:600;letter-spacing:-.3px}
+header h1 span{font-weight:400;color:var(--text2)}
+.stats{font-size:11px;color:var(--text3);margin-left:auto;font-variant-numeric:tabular-nums}
+.bar{display:flex;gap:8px;padding:5px 20px;border-bottom:1px solid var(--border);flex-shrink:0;background:var(--card);align-items:center;flex-wrap:wrap}
+.leg{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--text2)}
+.leg-d{width:7px;height:7px;border-radius:2px}
+.sep{width:1px;height:14px;background:var(--border);margin:0 4px}
+.bar input{padding:3px 8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px;background:var(--bg);color:var(--text);width:160px}
+.main{flex:1;display:flex;overflow:hidden;position:relative}
+#gc{flex:1;position:relative;cursor:grab}
+#gc:active{cursor:grabbing}
+#gc svg{display:block;width:100%;height:100%}
+.panel{width:320px;border-left:1px solid var(--border);overflow-y:auto;padding:14px 16px;flex-shrink:0;background:var(--card);display:none;font-size:12px;line-height:1.6}
+.panel.open{display:block}
+.panel h2{font-size:14px;font-weight:600;margin-bottom:6px;letter-spacing:-.2px}
+.panel .x{float:right;background:none;border:none;font-size:16px;cursor:pointer;color:var(--text3);padding:0 2px}
+.fl{margin-bottom:5px}
+.fl-l{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;font-weight:500}
+.fl-v{color:var(--text)}
+.badge{display:inline-block;padding:1px 7px;border-radius:10px;font-size:10px;font-weight:500}
+.conn-sec{margin-top:10px;border-top:1px solid var(--border);padding-top:8px}
+.conn-item{padding:3px 0;border-bottom:1px solid var(--border);font-size:11px}
+.conn-dir{font-size:9px;color:var(--text3);text-transform:uppercase;font-weight:500}
+.ev{display:inline-block;padding:0 4px;border-radius:3px;font-size:9px;font-weight:600}
+.ev-bom{color:var(--bom);background:#e1f5ee}
+.ev-est{color:var(--est);background:#faeeda}
+@media(prefers-color-scheme:dark){.ev-bom{background:#0a3525}.ev-est{background:#3d2a05}}
+.zc{position:absolute;bottom:14px;right:14px;display:flex;flex-direction:column;gap:3px}
+.zb{width:28px;height:28px;border:1px solid var(--border);background:var(--card);border-radius:var(--radius);cursor:pointer;font-size:14px;color:var(--text);display:flex;align-items:center;justify-content:center;transition:background .1s}
+.zb:hover{background:var(--bg)}
+.loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:13px}
+</style>
+</head>
+<body>
+<header>
+<h1>VW Group <span>· Circuito productivo</span></h1>
+<span class="stats" id="stats">Cargando datos...</span>
+</header>
+<div class="bar">
+<div class="leg"><div class="leg-d" style="background:var(--int)"></div>Integrador</div>
+<div class="leg"><div class="leg-d" style="background:var(--gen)"></div>Generalista</div>
+<div class="leg"><div class="leg-d" style="background:var(--esp)"></div>Especialista</div>
+<div class="leg"><div class="leg-d" style="background:var(--jv)"></div>JV</div>
+<div class="leg"><div class="leg-d" style="background:var(--fil)"></div>Filial</div>
+<div class="sep"></div>
+<div class="leg" style="font-size:9px;color:var(--text3)">Sólida = BOM · Punteada = EST</div>
+<div style="margin-left:auto"><input type="text" id="search" placeholder="Buscar firma..."></div>
+</div>
+<div class="main">
+<div id="gc"><div class="loading" id="loading">Cargando CSV...</div></div>
+<div class="panel" id="panel">
+<button class="x" id="xp">&times;</button>
+<h2 id="pn"></h2>
+<div id="pb"></div>
+</div>
+<div class="zc">
+<button class="zb" id="zi">+</button>
+<button class="zb" id="zo">&minus;</button>
+<button class="zb" id="zf" title="Ajustar">⊙</button>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+const C={Integrador:'var(--int)',Generalista:'var(--gen)',Especialista:'var(--esp)',JV:'var(--jv)',Filial:'var(--fil)'};
+const dark=matchMedia('(prefers-color-scheme:dark)').matches;
+const F={Integrador:dark?'#0c3a2a':'#e1f5ee',Generalista:dark?'#2a2660':'#eeedfe',Especialista:dark?'#4a1c0c':'#faece7',JV:dark?'#3d2a05':'#faeeda',Filial:dark?'#2a2a28':'#f1efe8'};
+
+let allN=[],allE=[],sim,svg,gEl,linkG,nodeG,zm;
+
+async function init(){
+  const base=location.hostname==='localhost'||location.hostname==='127.0.0.1'?'.':'';
+  try{
+    const [nRaw,eRaw]=await Promise.all([d3.csv(base+'/data/nodes.csv'),d3.csv(base+'/data/edges.csv')]);
+    allN=nRaw.map(d=>({...d,revenue:+d.revenue||0,pi_vw:+d.pi_vw||0}));
+    allE=eRaw.map(d=>({...d,source:d.from,target:d.to}));
+  }catch(e){document.getElementById('loading').textContent='Error cargando CSV: '+e.message;return}
+  setup();render();
+}
+
+function nr(d){return d.revenue?Math.max(6,Math.min(40,4+Math.sqrt(d.revenue/1000)*3)):8}
+
+function setup(){
+  const gc=document.getElementById('gc');
+  document.getElementById('loading').remove();
+  svg=d3.select(gc).append('svg');
+  const defs=svg.append('defs');
+  ['bom','est'].forEach(t=>{
+    defs.append('marker').attr('id','a-'+t).attr('viewBox','0 0 10 10').attr('refX',20).attr('refY',5)
+      .attr('markerWidth',5).attr('markerHeight',5).attr('orient','auto-start-reverse')
+      .append('path').attr('d','M0 0L10 5L0 10Z').attr('fill','var(--'+t+')');
+  });
+  gEl=svg.append('g');linkG=gEl.append('g');nodeG=gEl.append('g');
+  zm=d3.zoom().scaleExtent([.05,5]).on('zoom',e=>gEl.attr('transform',e.transform));
+  svg.call(zm);
+  document.getElementById('zi').onclick=()=>svg.transition().call(zm.scaleBy,1.3);
+  document.getElementById('zo').onclick=()=>svg.transition().call(zm.scaleBy,.77);
+  document.getElementById('zf').onclick=fit;
+  document.getElementById('xp').onclick=()=>document.getElementById('panel').classList.remove('open');
+  document.getElementById('search').oninput=e=>{
+    const q=e.target.value.toLowerCase();
+    nodeG.selectAll('.ng').attr('opacity',d=>!q||d.name.toLowerCase().includes(q)?1:.12);
+    linkG.selectAll('line').attr('opacity',d=>{
+      if(!q)return .45;
+      return(d.source?.name?.toLowerCase().includes(q)||d.target?.name?.toLowerCase().includes(q))?.6:.06;
+    });
+  };
+}
+
+function render(){
+  const nodes=allN.map(d=>({...d}));
+  const edges=allE.filter(e=>nodes.some(n=>n.id===e.from)&&nodes.some(n=>n.id===e.to)).map(e=>({...e,source:e.from,target:e.to}));
+  document.getElementById('stats').textContent=nodes.length+' firmas · '+edges.length+' relaciones';
+
+  const lk=linkG.selectAll('line').data(edges,d=>d.id);lk.exit().remove();
+  const lkE=lk.enter().append('line')
+    .attr('stroke',d=>d.evidence==='BOM'?'var(--bom)':'var(--est)')
+    .attr('stroke-width',d=>d.evidence==='BOM'?1.2:.8)
+    .attr('stroke-dasharray',d=>d.evidence==='BOM'?'none':'4 3')
+    .attr('opacity',.45)
+    .attr('marker-end',d=>'url(#a-'+(d.evidence==='BOM'?'bom':'est')+')');
+  const allLk=lkE.merge(lk);
+
+  const nd=nodeG.selectAll('.ng').data(nodes,d=>d.id);nd.exit().remove();
+  const ndE=nd.enter().append('g').attr('class','ng').style('cursor','pointer');
+  ndE.append('circle').attr('r',nr)
+    .attr('fill',d=>F[d.type]||F.Filial)
+    .attr('stroke',d=>C[d.type]||C.Filial)
+    .attr('stroke-width',d=>d.type==='Integrador'?2:.7);
+  ndE.append('text')
+    .text(d=>d.name.length>20?d.name.slice(0,18)+'…':d.name)
+    .attr('dy',d=>nr(d)+11).attr('text-anchor','middle')
+    .attr('font-size','9px').attr('fill','var(--text2)').attr('pointer-events','none');
+  ndE.on('click',(ev,d)=>panel(d));
+  ndE.call(d3.drag()
+    .on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y})
+    .on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y})
+    .on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}));
+  const allNd=ndE.merge(nd);
+
+  const W=window.innerWidth*.6,H=window.innerHeight*.7;
+  sim=d3.forceSimulation(nodes)
+    .force('link',d3.forceLink(edges).id(d=>d.id).distance(100))
+    .force('charge',d3.forceManyBody().strength(-350))
+    .force('center',d3.forceCenter(W/2,H/2))
+    .force('collision',d3.forceCollide().radius(d=>nr(d)+10))
+    .force('y',d3.forceY().y(d=>d.tier*160+100).strength(.15))
+    .on('tick',()=>{
+      allLk.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+      allNd.attr('transform',d=>`translate(${d.x},${d.y})`);
+    });
+  setTimeout(fit,2000);
+}
+
+function fit(){
+  if(!allN.length)return;
+  const b=gEl.node().getBBox();
+  const W=svg.node().clientWidth,H=svg.node().clientHeight;
+  const s=Math.min(W/(b.width+80),H/(b.height+80),.85);
+  const tx=W/2-(b.x+b.width/2)*s,ty=H/2-(b.y+b.height/2)*s;
+  svg.transition().duration(600).call(zm.transform,d3.zoomIdentity.translate(tx,ty).scale(s));
+}
+
+function panel(d){
+  const p=document.getElementById('panel');
+  document.getElementById('pn').textContent=d.name;
+  const tc=C[d.type]||'var(--fil)';const tf=F[d.type]||F.Filial;
+  let h=`<div class="fl"><span class="badge" style="color:${tc};background:${tf}">${d.type||'—'}</span> · Tier ${d.tier??'—'}</div>`;
+  const fields=[['País','country'],['Facturación',null],['πVW','pi_vw'],['Componentes','components'],['Incluye (M&A)','includes'],['Fuente','source'],['Notas','notes']];
+  fields.forEach(([l,k])=>{
+    if(k==='pi_vw'&&d.pi_vw)h+=`<div class="fl"><div class="fl-l">${l}</div><div class="fl-v">${d.pi_vw}%</div></div>`;
+    else if(!k&&d.revenue)h+=`<div class="fl"><div class="fl-l">Facturación</div><div class="fl-v">${d.revenue_currency==='USD'?'$':'€'}${Number(d.revenue).toLocaleString('es')}M</div></div>`;
+    else if(k&&d[k])h+=`<div class="fl"><div class="fl-l">${l}</div><div class="fl-v">${d[k]}</div></div>`;
+  });
+  const out=allE.filter(e=>e.from===d.id),inc=allE.filter(e=>e.to===d.id);
+  if(out.length||inc.length){
+    h+=`<div class="conn-sec"><div class="fl-l">Relaciones (${out.length+inc.length})</div>`;
+    out.forEach(e=>{const t=allN.find(n=>n.id===e.to);h+=`<div class="conn-item"><span class="conn-dir">Vende a →</span> ${t?.name||e.to}<br>${e.component||''} <span class="ev ${e.evidence==='BOM'?'ev-bom':'ev-est'}">${e.evidence||'EST'}</span> <span style="font-size:9px;color:var(--text3)">${e.source_ref||''}</span></div>`});
+    inc.forEach(e=>{const s=allN.find(n=>n.id===e.from);h+=`<div class="conn-item"><span class="conn-dir">← Compra de</span> ${s?.name||e.from}<br>${e.component||''} <span class="ev ${e.evidence==='BOM'?'ev-bom':'ev-est'}">${e.evidence||'EST'}</span> <span style="font-size:9px;color:var(--text3)">${e.source_ref||''}</span></div>`});
+    h+=`</div>`;
+  }
+  document.getElementById('pb').innerHTML=h;p.classList.add('open');
+}
+
+init();
+window.addEventListener('resize',()=>{if(sim){const W=window.innerWidth*.6,H=window.innerHeight*.7;sim.force('center',d3.forceCenter(W/2,H/2)).alpha(.1).restart()}});
+</script>
+</body>
+</html>
