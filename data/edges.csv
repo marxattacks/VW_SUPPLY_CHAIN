@@ -1,0 +1,26 @@
+id,from,to,component,evidence,source_ref
+bosch-vw,bosch,vw-ag,"InyecciÃ³n, ABS/ESC, software chasis",EST,Literatura analizada
+denso-vw,denso,vw-ag,"ElectrÃ³nica motor, HVAC, sensores",EST,SEC XBRL 20-F Ï€VW 13-15%
+magna-vw,magna,vw-ag,"Battery covers, carrocerÃ­a",BOM,VW Group Award 2025 Product
+continental-vw,continental,vw-ag,"NeumÃ¡ticos, electrÃ³nica",EST,Literatura analizada
+zf-vw,zf,vw-ag,"Transmisiones, frenos, seguridad",EST,Literatura analizada
+aisin-vw,aisin,vw-ag,"Transmisiones, frenos",EST,Literatura sector
+forvia-vw,forvia,vw-ag,"Salpicaderos, emisiones, iluminaciÃ³n",EST,Literatura analizada
+valeo-vw,valeo,vw-ag,"IluminaciÃ³n, tÃ©rmicos, ADAS",EST,Literatura analizada
+lear-vw,lear,vw-ag,"Asientos, E-Systems (JIT/JIS)",EST,Literatura analizada
+motherson-vw,motherson,vw-ag,"Bumper Passat, panel puerta LeÃ³n, cockpit A7, panel Macan",BOM,"MarkLines ficha SMP
+adient-vw,adient,vw-ag,"Asientos (JIT/JIS)",EST,Literatura analizada
+plastic-omnium-vw,plastic-omnium,vw-ag,"Exteriores plÃ¡sticos",EST,Literatura analizada
+schaeffler-vw,schaeffler,vw-ag,"Rodamientos, transmisiones",EST,VW Group Award 2024
+gestamp-vw,gestamp,vw-ag,"EstampaciÃ³n metÃ¡lica",EST,VW Group Award 2025
+nemak-vw,nemak,vw-ag,"Bloques motor + culatas 3.0 TFSI V6 (vÃ­a Audi Hungaria)",BOM,"MarkLines Who Supplies Whom
+ronal-vw,ronal,vw-ag,"Llantas aleaciÃ³n VW/Audi",BOM,"MarkLines
+lg-es-vw,lg-es,vw-ag,"Celdas baterÃ­a para plataforma MEB",EST,VW Group Award 2024 Partnership
+gotion-vw,gotion,vw-ag,"Celdas baterÃ­a",EST,"VW Group Award 2024 Battery
+ti-vw,ti,vw-ag,"Semiconductores analog/embedded",EST,VW Group Award 2025 Operational Excellence
+infineon-bosch,infineon,bosch,"Chips potencia, sensores",EST,Estructura conocida sector semiconductores auto
+nxp-bosch,nxp,bosch,"MCUs automotrices",EST,"Copropietarios ESMC
+infineon-continental,infineon,continental,"Chips potencia",EST,Estructura sector
+nxp-continental,nxp,continental,"MCUs",EST,Estructura sector
+tsmc-infineon,tsmc,infineon,"Obleas silicio (outsourcing parcial)",EST,Estructura sector foundry
+tsmc-nxp,tsmc,nxp,"Obleas silicio",EST,"ESMC JV
