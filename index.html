@@ -81,7 +81,7 @@ const F={Integrador:dark?'#0c3a2a':'#e1f5ee',Generalista:dark?'#2a2660':'#eeedfe
 let allN=[],allE=[],sim,svg,gEl,linkG,nodeG,zm;
 
 async function init(){
-  const base=location.hostname==='localhost'||location.hostname==='127.0.0.1'?'.':'';
+  const base='.';
   try{
     const [nRaw,eRaw]=await Promise.all([d3.csv(base+'/data/nodes.csv'),d3.csv(base+'/data/edges.csv')]);
     allN=nRaw.map(d=>({...d,revenue:+d.revenue||0,pi_vw:+d.pi_vw||0}));
