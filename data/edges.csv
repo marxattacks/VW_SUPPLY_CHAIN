@@ -1,70 +1,70 @@
 id,from,to,component,evidence,source_ref
-bosch-vw,bosch,vw-ag,"InyecciÃ³n, ABS/ESC, software chasis",EST,Literatura analizada
-denso-vw,denso,vw-ag,"ElectrÃ³nica motor, HVAC, sensores",EST,SEC XBRL 20-F Ï€VW 13-15%
-magna-vw,magna,vw-ag,"Battery covers, carrocerÃ­a",BOM,VW Group Award 2025 Product
-continental-vw,continental,vw-ag,"NeumÃ¡ticos, electrÃ³nica",EST,Literatura analizada
+bosch-vw,bosch,vw-ag,"Inyección, ABS/ESC, software chasis",EST,Literatura analizada
+denso-vw,denso,vw-ag,"Electrónica motor, HVAC, sensores",EST,SEC XBRL 20-F πVW 13-15%
+magna-vw,magna,vw-ag,"Battery covers, carrocería",BOM,VW Group Award 2025 Product
+continental-vw,continental,vw-ag,"Neumáticos, electrónica",EST,Literatura analizada
 zf-vw,zf,vw-ag,"Transmisiones, frenos, seguridad",EST,Literatura analizada
 aisin-vw,aisin,vw-ag,"Transmisiones, frenos",EST,Literatura sector
-forvia-vw,forvia,vw-ag,"Salpicaderos, emisiones, iluminaciÃ³n",EST,Literatura analizada
-valeo-vw,valeo,vw-ag,"IluminaciÃ³n, tÃ©rmicos, ADAS",EST,Literatura analizada
+forvia-vw,forvia,vw-ag,"Salpicaderos, emisiones, iluminación",EST,Literatura analizada
+valeo-vw,valeo,vw-ag,"Iluminación, térmicos, ADAS",EST,Literatura analizada
 lear-vw,lear,vw-ag,"Asientos, E-Systems (JIT/JIS)",EST,Literatura analizada
-motherson-vw,motherson,vw-ag,"Bumper Passat, panel puerta LeÃ³n, cockpit A7, panel Macan",BOM,"MarkLines ficha SMP
+motherson-vw,motherson,vw-ag,"Bumper Passat, panel puerta León, cockpit A7, panel Macan",BOM,"MarkLines ficha SMP; ISF 2016 exhibition photos"
 adient-vw,adient,vw-ag,"Asientos (JIT/JIS)",EST,Literatura analizada
-plastic-omnium-vw,plastic-omnium,vw-ag,"Exteriores plÃ¡sticos",EST,Literatura analizada
+plastic-omnium-vw,plastic-omnium,vw-ag,"Exteriores plásticos",EST,Literatura analizada
 schaeffler-vw,schaeffler,vw-ag,"Rodamientos, transmisiones",EST,VW Group Award 2024
-gestamp-vw,gestamp,vw-ag,"EstampaciÃ³n metÃ¡lica",EST,VW Group Award 2025
-nemak-vw,nemak,vw-ag,"Bloques motor + culatas 3.0 TFSI V6 (vÃ­a Audi Hungaria)",BOM,"MarkLines Who Supplies Whom
-ronal-vw,ronal,vw-ag,"Llantas aleaciÃ³n VW/Audi",BOM,"MarkLines
-lg-es-vw,lg-es,vw-ag,"Celdas baterÃ­a para plataforma MEB",EST,VW Group Award 2024 Partnership
-gotion-vw,gotion,vw-ag,"Celdas baterÃ­a",EST,"VW Group Award 2024 Battery
+gestamp-vw,gestamp,vw-ag,"Estampación metálica",EST,VW Group Award 2025
+nemak-vw,nemak,vw-ag,"Bloques motor + culatas 3.0 TFSI V6 (vía Audi Hungaria)",BOM,"MarkLines Who Supplies Whom; SEC XBRL πVW 11-15%"
+ronal-vw,ronal,vw-ag,"Llantas aleación VW/Audi",BOM,"MarkLines; conocimiento directo"
+lg-es-vw,lg-es,vw-ag,"Celdas batería para plataforma MEB",EST,VW Group Award 2024 Partnership
+gotion-vw,gotion,vw-ag,"Celdas batería",EST,"VW Group Award 2024 Battery; VW posee 26%"
 ti-vw,ti,vw-ag,"Semiconductores analog/embedded",EST,VW Group Award 2025 Operational Excellence
 infineon-bosch,infineon,bosch,"Chips potencia, sensores",EST,Estructura conocida sector semiconductores auto
-nxp-bosch,nxp,bosch,"MCUs automotrices",EST,"Copropietarios ESMC
+nxp-bosch,nxp,bosch,"MCUs automotrices",EST,"Copropietarios ESMC; estructura sector"
 infineon-continental,infineon,continental,"Chips potencia",EST,Estructura sector
 nxp-continental,nxp,continental,"MCUs",EST,Estructura sector
 tsmc-infineon,tsmc,infineon,"Obleas silicio (outsourcing parcial)",EST,Estructura sector foundry
-tsmc-nxp,tsmc,nxp,"Obleas silicio",EST,"ESMC JV
+tsmc-nxp,tsmc,nxp,"Obleas silicio",EST,"ESMC JV; estructura sector"
 audi-hungaria-vw,audi-hungaria,vw-ag,Motores completos para consorcio,EST,Managing the international value chain in the automotive industry
-skoda-vw,skoda,vw-ag,VehÃ­culos y componentes mecÃ¡nicos,EST,Outsourcing in the automotive industry
-seat-vw,seat,vw-ag,AutomÃ³viles y componentes,EST,ModularizaciÃ³n Trayectorias...
-traton-vw,traton,vw-ag,VehÃ­culos comerciales pesados,EST,ValuaciÃ³n del Grupo Volkswagen
-kassel-vw,kassel,vw-ag,"Transmisiones, fundiciÃ³n aluminio",EST,Volkswagen group supply chain analysis in Europe
-puebla-motores-vw,puebla-motores,vw-ag,Motores exportados a plantas DE/ES/BR/CZ,EST,ModularizaciÃ³n Trayectorias...
-cordoba-transax-vw,cordoba-transax,vw-ag,"Transmisiones manuales, ejes, discos freno",EST,ModularizaciÃ³n Trayectorias...
-delphi-aptiv-vw,delphi-aptiv,vw-ag,"Arneses elÃ©ctricos, arquitecturas electrÃ³nicas",EST,Exploring the risks of value chain modularity
-brose-vw,brose,vw-ag,"MÃ³dulos mecatrÃ³nicos puertas, elevadores cristales",EST,ModularizaciÃ³n Trayectorias...
-brose-sitech-vw,brose-sitech,vw-ag,"Asientos completos, estructuras mecatrÃ³nicas",EST,ValuaciÃ³n del Grupo Volkswagen
-sommer-allibert-vw,sommer-allibert,vw-ag,"Tableros, consolas, recubrimientos",EST,ModularizaciÃ³n Trayectorias...
-vdo-siemens-vw,vdo-siemens,vw-ag,"Cabina integrada, instrumentos, navegaciÃ³n",EST,Outsourcing in the automotive industry
-gkn-vw,gkn,vw-ag,"Juntas CVJ, transmisiÃ³n de par",EST,Automotive global value chain
-ntn-vw,ntn,vw-ag,"Rodamientos, juntas homocinÃ©ticas",EST,Automotive global value chain
+skoda-vw,skoda,vw-ag,Vehículos y componentes mecánicos,EST,Outsourcing in the automotive industry
+seat-vw,seat,vw-ag,Automóviles y componentes,EST,Modularización Trayectorias...
+traton-vw,traton,vw-ag,Vehículos comerciales pesados,EST,Valuación del Grupo Volkswagen
+kassel-vw,kassel,vw-ag,"Transmisiones, fundición aluminio",EST,Volkswagen group supply chain analysis in Europe
+puebla-motores-vw,puebla-motores,vw-ag,Motores exportados a plantas DE/ES/BR/CZ,EST,Modularización Trayectorias...
+cordoba-transax-vw,cordoba-transax,vw-ag,"Transmisiones manuales, ejes, discos freno",EST,Modularización Trayectorias...
+delphi-aptiv-vw,delphi-aptiv,vw-ag,"Arneses eléctricos, arquitecturas electrónicas",EST,Exploring the risks of value chain modularity
+brose-vw,brose,vw-ag,"Módulos mecatrónicos puertas, elevadores cristales",EST,Modularización Trayectorias...
+brose-sitech-vw,brose-sitech,vw-ag,"Asientos completos, estructuras mecatrónicas",EST,Valuación del Grupo Volkswagen
+sommer-allibert-vw,sommer-allibert,vw-ag,"Tableros, consolas, recubrimientos",EST,Modularización Trayectorias...
+vdo-siemens-vw,vdo-siemens,vw-ag,"Cabina integrada, instrumentos, navegación",EST,Outsourcing in the automotive industry
+gkn-vw,gkn,vw-ag,"Juntas CVJ, transmisión de par",EST,Automotive global value chain
+ntn-vw,ntn,vw-ag,"Rodamientos, juntas homocinéticas",EST,Automotive global value chain
 iochpe-maxion-vw,iochpe-maxion,vw-ag,"Chasis, bastidores, ruedas",BOM,Outsourcing in the automotive industry (Consorcio Modular Resende)
-arvinmeritor-vw,arvinmeritor,vw-ag,"SuspensiÃ³n, ejes, frenos",BOM,Outsourcing in the automotive industry (Consorcio Modular Resende)
-tamet-vw,tamet,vw-ag,"EstampaciÃ³n metÃ¡lica, carrocerÃ­a",BOM,Outsourcing in the automotive industry (Consorcio Modular Resende)
-refa-vw,refa,vw-ag,Componentes mecÃ¡nicos precisiÃ³n,EST,ModularizaciÃ³n Trayectorias...
-jiangsu-pacific-vw,jiangsu-pacific,vw-ag,Engranajes forja precisiÃ³n,EST,Volkswagen group supply chain analysis in Europe
-mwm-vw,mwm,vw-ag,Motores diÃ©sel comerciales,BOM,Outsourcing in the automotive industry (Consorcio Modular Resende)
-cummins-vw,cummins,vw-ag,Motores diÃ©sel alta potencia,BOM,Outsourcing in the automotive industry (Consorcio Modular Resende)
+arvinmeritor-vw,arvinmeritor,vw-ag,"Suspensión, ejes, frenos",BOM,Outsourcing in the automotive industry (Consorcio Modular Resende)
+tamet-vw,tamet,vw-ag,"Estampación metálica, carrocería",BOM,Outsourcing in the automotive industry (Consorcio Modular Resende)
+refa-vw,refa,vw-ag,Componentes mecánicos precisión,EST,Modularización Trayectorias...
+jiangsu-pacific-vw,jiangsu-pacific,vw-ag,Engranajes forja precisión,EST,Volkswagen group supply chain analysis in Europe
+mwm-vw,mwm,vw-ag,Motores diésel comerciales,BOM,Outsourcing in the automotive industry (Consorcio Modular Resende)
+cummins-vw,cummins,vw-ag,Motores diésel alta potencia,BOM,Outsourcing in the automotive industry (Consorcio Modular Resende)
 boysen-vw,boysen,vw-ag,"Sistemas escape, colectores emisiones",EST,Volkswagen group supply chain analysis in Europe
-kautex-vw,kautex,vw-ag,DepÃ³sitos combustible plÃ¡sticos,EST,ModularizaciÃ³n Trayectorias...
-bridgestone-vw,bridgestone,vw-ag,NeumÃ¡ticos equipo original,EST,Outsourcing in the automotive industry
-remon-borlen-vw,remon-borlen,vw-ag,Ruedas y neumÃ¡ticos montados,BOM,Outsourcing in the automotive industry (Consorcio Modular Resende)
-vitro-vw,vitro,vw-ag,"Parabrisas, cristales",EST,ModularizaciÃ³n Trayectorias...
-hella-vw,hella,vw-ag,"Faros, Ã³pticas, iluminaciÃ³n",EST,ModularizaciÃ³n Trayectorias...
-electro-optica-vw,electro-optica,vw-ag,"Radiadores, defensas, Ã³pticas",EST,ModularizaciÃ³n Trayectorias...
-autoliv-vw,autoliv,vw-ag,"Airbags, cinturones seguridad",EST,ModularizaciÃ³n Trayectorias...
-arneses-vw,arneses-especiales,vw-ag,"Cableados, redes elÃ©ctricas",EST,ModularizaciÃ³n Trayectorias...
-harting-vw,harting,vw-ag,Cables y conectores alta tensiÃ³n carga EV,EST,Volkswagen group supply chain analysis in Europe
-samsung-sdi-vw,samsung-sdi,vw-ag,Celdas baterÃ­as ion-litio,EST,Relocation Standardization and Vertical Specialization
-panasonic-vw,panasonic-energy,vw-ag,Celdas baterÃ­as ion-litio,EST,Relocation Standardization and Vertical Specialization
-byd-vw,byd,vw-ag,Celdas baterÃ­as,EST,Relocation Standardization and Vertical Specialization
-schenker-vw,schenker,vw-ag,LogÃ­stica ferroviaria componentes,EST,Managing the international value chain in the automotive industry
-rudolph-vw,rudolph,audi-hungaria,GestiÃ³n interna almacÃ©n,EST,Managing the international value chain in the automotive industry
-seglo-vw,seglo,vw-ag,Secuenciado JIT-JIS,EST,AnÃ¡lisis de una cadena de suministro de autopartes
-eisenmann-vw,eisenmann,vw-ag,Pintura industrial carrocerÃ­as,BOM,Outsourcing in the automotive industry (Consorcio Modular Resende)
+kautex-vw,kautex,vw-ag,Depósitos combustible plásticos,EST,Modularización Trayectorias...
+bridgestone-vw,bridgestone,vw-ag,Neumáticos equipo original,EST,Outsourcing in the automotive industry
+remon-borlen-vw,remon-borlen,vw-ag,Ruedas y neumáticos montados,BOM,Outsourcing in the automotive industry (Consorcio Modular Resende)
+vitro-vw,vitro,vw-ag,"Parabrisas, cristales",EST,Modularización Trayectorias...
+hella-vw,hella,vw-ag,"Faros, ópticas, iluminación",EST,Modularización Trayectorias...
+electro-optica-vw,electro-optica,vw-ag,"Radiadores, defensas, ópticas",EST,Modularización Trayectorias...
+autoliv-vw,autoliv,vw-ag,"Airbags, cinturones seguridad",EST,Modularización Trayectorias...
+arneses-vw,arneses-especiales,vw-ag,"Cableados, redes eléctricas",EST,Modularización Trayectorias...
+harting-vw,harting,vw-ag,Cables y conectores alta tensión carga EV,EST,Volkswagen group supply chain analysis in Europe
+samsung-sdi-vw,samsung-sdi,vw-ag,Celdas baterías ion-litio,EST,Relocation Standardization and Vertical Specialization
+panasonic-vw,panasonic-energy,vw-ag,Celdas baterías ion-litio,EST,Relocation Standardization and Vertical Specialization
+byd-vw,byd,vw-ag,Celdas baterías,EST,Relocation Standardization and Vertical Specialization
+schenker-vw,schenker,vw-ag,Logística ferroviaria componentes,EST,Managing the international value chain in the automotive industry
+rudolph-vw,rudolph,audi-hungaria,Gestión interna almacén,EST,Managing the international value chain in the automotive industry
+seglo-vw,seglo,vw-ag,Secuenciado JIT-JIS,EST,Análisis de una cadena de suministro de autopartes
+eisenmann-vw,eisenmann,vw-ag,Pintura industrial carrocerías,BOM,Outsourcing in the automotive industry (Consorcio Modular Resende)
 karmann-vw,karmann,vw-ag,Manufactura por contrato convertibles,EST,Managing the international value chain in the automotive industry
-siem-vw,siem-carriers,vw-ag,Transporte marÃ­timo vehÃ­culos,EST,Volkswagen group supply chain analysis in Europe
-enel-vw,enel,vw-ag,Infraestructura carga rÃ¡pida,EST,ValuaciÃ³n del Grupo Volkswagen
+siem-vw,siem-carriers,vw-ag,Transporte marítimo vehículos,EST,Volkswagen group supply chain analysis in Europe
+enel-vw,enel,vw-ag,Infraestructura carga rápida,EST,Valuación del Grupo Volkswagen
 nemak-audi,nemak,audi-hungaria,Bloques motor + culatas aluminio,BOM,MarkLines Who Supplies Whom
-schenker-audi,schenker,audi-hungaria,Trenes logÃ­sticos Ingolstadtâ†”GyÅ‘r,EST,Managing the international value chain in the automotive industry
+schenker-audi,schenker,audi-hungaria,Trenes logísticos Ingolstadt↔Győr,EST,Managing the international value chain in the automotive industry
 vdo-resende,vdo-siemens,vw-ag,Instrumentos/acabado (Consorcio Modular Resende),BOM,Outsourcing in the automotive industry
