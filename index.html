@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VW Group — Circuito productivo</title>
 <style>
-:root{--bg:#f7f7f5;--card:#fff;--text:#1c1c1a;--text2:#6b6b66;--text3:#9c9a92;--border:#ddd;--gen:#4338a8;--esp:#c74b22;--int:#0a6b4f;--jv:#a06510;--fil:#6b6b66;--bom:#0a6b4f;--est:#a06510;--sans:Inter,-apple-system,system-ui,sans-serif;--radius:6px;--hover:#f0f0ec}
-@media(prefers-color-scheme:dark){:root{--bg:#161615;--card:#1e1e1c;--text:#e0dfd8;--text2:#9c9a92;--text3:#6b6b66;--border:#333;--gen:#9b93e8;--esp:#f09070;--int:#5dc8a0;--jv:#f0c060;--fil:#9c9a92;--bom:#5dc8a0;--est:#f0c060;--hover:#2a2a28}}
+:root{--bg:#f7f7f5;--card:#fff;--text:#1c1c1a;--text2:#6b6b66;--text3:#9c9a92;--border:#ddd;--gen:#4338a8;--esp:#c74b22;--int:#0a6b4f;--jv:#a06510;--fil:#6b6b66;--bom:#0a6b4f;--est:#a06510;--sans:Inter,-apple-system,system-ui,sans-serif;--radius:6px;--hover:#f0f0ec;--filter-bg:#f0f0ec}
+@media(prefers-color-scheme:dark){:root{--bg:#161615;--card:#1e1e1c;--text:#e0dfd8;--text2:#9c9a92;--text3:#6b6b66;--border:#333;--gen:#9b93e8;--esp:#f09070;--int:#5dc8a0;--jv:#f0c060;--fil:#9c9a92;--bom:#5dc8a0;--est:#f0c060;--hover:#2a2a28;--filter-bg:#252523}}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:var(--sans);background:var(--bg);color:var(--text);overflow:hidden;height:100vh;display:flex;flex-direction:column;font-size:13px}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
@@ -51,14 +51,20 @@ header h1 span{font-weight:400;color:var(--text2)}
 .table-wrap{flex:1;overflow:auto;padding:0}
 table{width:100%;border-collapse:collapse;font-size:12px}
 thead{position:sticky;top:0;z-index:2}
-th{background:var(--card);border-bottom:2px solid var(--border);padding:6px 10px;text-align:left;font-weight:600;font-size:11px;color:var(--text2);white-space:nowrap}
-td{padding:5px 10px;border-bottom:1px solid var(--border);vertical-align:top;max-width:220px;overflow:hidden;text-overflow:ellipsis}
+th{background:var(--card);border-bottom:1px solid var(--border);padding:6px 10px;text-align:left;font-weight:600;font-size:11px;color:var(--text2);white-space:nowrap}
+td{padding:5px 10px;border-bottom:1px solid var(--border);vertical-align:top;max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 tr:hover td{background:var(--hover)}
+.filter-row th{padding:3px 4px;background:var(--filter-bg);border-bottom:2px solid var(--border)}
+.filter-input{width:100%;padding:3px 6px;border:1px solid var(--border);border-radius:4px;font-size:10px;font-family:var(--sans);background:var(--card);color:var(--text);box-sizing:border-box}
+.filter-input::placeholder{color:var(--text3);font-style:italic}
+.filter-input:focus{outline:none;border-color:var(--int)}
 .toolbar{display:flex;gap:8px;padding:8px 16px;border-bottom:1px solid var(--border);background:var(--card);flex-shrink:0;align-items:center;flex-wrap:wrap}
 .btn{padding:5px 14px;border-radius:var(--radius);font-size:11px;font-weight:500;cursor:pointer;border:1px solid var(--border);background:var(--card);color:var(--text);transition:all .12s}
 .btn:hover{background:var(--hover)}
 .btn-p{background:var(--int);color:#fff;border-color:var(--int)}
 .btn-p:hover{opacity:.9}
+.btn-w{color:var(--esp);border-color:var(--esp)}
+.btn-w:hover{background:var(--esp);color:#fff}
 .count{font-size:11px;color:var(--text3);margin-left:auto}
 .modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:100;align-items:center;justify-content:center}
 .modal-bg.on{display:flex}
@@ -87,11 +93,11 @@ tr:hover td{background:var(--hover)}
 <div class="zc"><button class="zb" id="zi">+</button><button class="zb" id="zo">&minus;</button><button class="zb" id="zf" title="Ajustar">⊙</button></div></div>
 </div>
 <div class="view" id="v-nodes">
-<div class="toolbar"><button class="btn btn-p" id="add-node">+ Añadir nodo</button><button class="btn" id="exp-nodes">↓ Exportar nodes.csv</button><span class="count" id="n-count"></span></div>
+<div class="toolbar"><button class="btn btn-p" id="add-node">+ Añadir nodo</button><button class="btn btn-w" id="clear-n-filters">✕ Limpiar filtros</button><button class="btn" id="exp-nodes">↓ Exportar CSV</button><span class="count" id="n-count"></span></div>
 <div class="table-wrap"><table><thead id="n-head"></thead><tbody id="n-body"></tbody></table></div>
 </div>
 <div class="view" id="v-edges">
-<div class="toolbar"><button class="btn btn-p" id="add-edge">+ Añadir relación</button><button class="btn" id="exp-edges">↓ Exportar edges.csv</button><span class="count" id="e-count"></span></div>
+<div class="toolbar"><button class="btn btn-p" id="add-edge">+ Añadir relación</button><button class="btn btn-w" id="clear-e-filters">✕ Limpiar filtros</button><button class="btn" id="exp-edges">↓ Exportar CSV</button><span class="count" id="e-count"></span></div>
 <div class="table-wrap"><table><thead id="e-head"></thead><tbody id="e-body"></tbody></table></div>
 </div>
 </div>
@@ -125,8 +131,11 @@ const C={Integrador:'var(--int)',Generalista:'var(--gen)',Especialista:'var(--es
 const dark=matchMedia('(prefers-color-scheme:dark)').matches;
 const F={Integrador:dark?'#0c3a2a':'#e1f5ee',Generalista:dark?'#2a2660':'#eeedfe',Especialista:dark?'#4a1c0c':'#faece7',JV:dark?'#3d2a05':'#faeeda',Filial:dark?'#2a2a28':'#f1efe8'};
 const NCOLS=['id','name','tier','type','country','revenue','revenue_currency','pi_vw','components','includes','source','notes'];
+const NLABELS=['ID','Nombre','Tier','Tipo','País','Facturación','Moneda','πVW%','Componentes','Incluye','Fuente','Notas'];
 const ECOLS=['id','from','to','component','evidence','source_ref'];
+const ELABELS=['ID','Vendedor','Comprador','Componente','Evidencia','Fuente'];
 let allN=[],allE=[],sim,svg,gEl,linkG,nodeG,zm,editingNode=null,editingEdge=null;
+let nFilters={},eFilters={};
 
 document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
   document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
@@ -195,21 +204,99 @@ function showPanel(d){
   document.getElementById('pb').innerHTML=h;p.classList.add('open');
 }
 
-function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
-function renderNTable(){
-  const labels=['ID','Nombre','Tier','Tipo','País','Facturación','Moneda','πVW%','Componentes','Incluye','Fuente','Notas'];
-  document.getElementById('n-head').innerHTML='<tr>'+labels.map(l=>'<th>'+l+'</th>').join('')+'<th></th></tr>';
-  document.getElementById('n-body').innerHTML=allN.map((n,i)=>'<tr>'+NCOLS.map(c=>'<td title="'+esc(n[c]||'')+'">'+esc(n[c]||'')+'</td>').join('')+'<td><button class="btn" onclick="editNode('+i+')">✎</button></td></tr>').join('');
-  document.getElementById('n-count').textContent=allN.length+' nodos';
-}
-function renderETable(){
-  const labels=['ID','Vendedor','Comprador','Componente','Evidencia','Fuente'];
-  document.getElementById('e-head').innerHTML='<tr>'+labels.map(l=>'<th>'+l+'</th>').join('')+'<th></th></tr>';
-  document.getElementById('e-body').innerHTML=allE.map((e,i)=>{const fn=allN.find(n=>n.id===e.from)?.name||e.from;const tn=allN.find(n=>n.id===e.to)?.name||e.to;
-    return '<tr><td>'+esc(e.id)+'</td><td>'+esc(fn)+'</td><td>'+esc(tn)+'</td><td title="'+esc(e.component||'')+'">'+esc(e.component||'')+'</td><td><span class="ev '+(e.evidence==='BOM'?'ev-bom':'ev-est')+'">'+e.evidence+'</span></td><td title="'+esc(e.source_ref||'')+'">'+esc(e.source_ref||'')+'</td><td><button class="btn" onclick="editEdge('+i+')">✎</button></td></tr>'}).join('');
-  document.getElementById('e-count').textContent=allE.length+' relaciones';
+// === FILTERING ===
+function matchFilter(val,filter){
+  if(!filter)return true;
+  const v=String(val||'').toLowerCase();
+  const f=filter.toLowerCase().trim();
+  if(!f)return true;
+  // Support >, <, >=, <=, = for numeric
+  const numMatch=f.match(/^([><=!]{1,2})\s*(\d+\.?\d*)$/);
+  if(numMatch){
+    const num=parseFloat(v);const target=parseFloat(numMatch[2]);
+    if(isNaN(num))return false;
+    switch(numMatch[1]){
+      case '>':return num>target;case '<':return num<target;
+      case '>=':return num>=target;case '<=':return num<=target;
+      case '=':case '==':return num===target;case '!=':return num!==target;
+    }
+  }
+  // Multiple terms with | = OR
+  if(f.includes('|'))return f.split('|').some(t=>v.includes(t.trim()));
+  // Default: substring match
+  return v.includes(f);
 }
 
+function getFilteredN(){
+  return allN.filter(n=>NCOLS.every(c=>matchFilter(n[c],nFilters[c])));
+}
+function getFilteredE(){
+  return allE.filter(e=>{
+    const row={...e};
+    row.from=allN.find(n=>n.id===e.from)?.name||e.from;
+    row.to=allN.find(n=>n.id===e.to)?.name||e.to;
+    return ECOLS.every(c=>matchFilter(row[c],eFilters[c]));
+  });
+}
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;')}
+
+function renderNTable(){
+  let headHtml='<tr>'+NLABELS.map(l=>'<th>'+l+'</th>').join('')+'<th></th></tr>';
+  headHtml+='<tr class="filter-row">'+NCOLS.map(c=>'<th><input class="filter-input" data-col="'+c+'" data-table="n" placeholder="Filtrar..." value="'+esc(nFilters[c]||'')+'"></th>').join('')+'<th></th></tr>';
+  document.getElementById('n-head').innerHTML=headHtml;
+  const filtered=getFilteredN();
+  document.getElementById('n-body').innerHTML=filtered.map((n,i)=>{
+    const realIdx=allN.indexOf(n);
+    return '<tr>'+NCOLS.map(c=>'<td title="'+esc(n[c]||'')+'">'+esc(n[c]||'')+'</td>').join('')+'<td><button class="btn" onclick="editNode('+realIdx+')">✎</button></td></tr>';
+  }).join('');
+  document.getElementById('n-count').textContent=filtered.length+' / '+allN.length+' nodos';
+  // Attach filter listeners
+  document.querySelectorAll('.filter-input[data-table="n"]').forEach(inp=>{
+    inp.oninput=()=>{nFilters[inp.dataset.col]=inp.value;renderNTableBody()};
+  });
+}
+function renderNTableBody(){
+  const filtered=getFilteredN();
+  document.getElementById('n-body').innerHTML=filtered.map(n=>{
+    const realIdx=allN.indexOf(n);
+    return '<tr>'+NCOLS.map(c=>'<td title="'+esc(n[c]||'')+'">'+esc(n[c]||'')+'</td>').join('')+'<td><button class="btn" onclick="editNode('+realIdx+')">✎</button></td></tr>';
+  }).join('');
+  document.getElementById('n-count').textContent=filtered.length+' / '+allN.length+' nodos';
+}
+
+function renderETable(){
+  let headHtml='<tr>'+ELABELS.map(l=>'<th>'+l+'</th>').join('')+'<th></th></tr>';
+  headHtml+='<tr class="filter-row">'+ECOLS.map(c=>'<th><input class="filter-input" data-col="'+c+'" data-table="e" placeholder="Filtrar..." value="'+esc(eFilters[c]||'')+'"></th>').join('')+'<th></th></tr>';
+  document.getElementById('e-head').innerHTML=headHtml;
+  const filtered=getFilteredE();
+  document.getElementById('e-body').innerHTML=filtered.map(e=>{
+    const realIdx=allE.indexOf(e);
+    const fn=allN.find(n=>n.id===e.from)?.name||e.from;
+    const tn=allN.find(n=>n.id===e.to)?.name||e.to;
+    return '<tr><td>'+esc(e.id)+'</td><td>'+esc(fn)+'</td><td>'+esc(tn)+'</td><td title="'+esc(e.component||'')+'">'+esc(e.component||'')+'</td><td><span class="ev '+(e.evidence==='BOM'?'ev-bom':'ev-est')+'">'+e.evidence+'</span></td><td title="'+esc(e.source_ref||'')+'">'+esc(e.source_ref||'')+'</td><td><button class="btn" onclick="editEdge('+realIdx+')">✎</button></td></tr>';
+  }).join('');
+  document.getElementById('e-count').textContent=filtered.length+' / '+allE.length+' relaciones';
+  document.querySelectorAll('.filter-input[data-table="e"]').forEach(inp=>{
+    inp.oninput=()=>{eFilters[inp.dataset.col]=inp.value;renderETableBody()};
+  });
+}
+function renderETableBody(){
+  const filtered=getFilteredE();
+  document.getElementById('e-body').innerHTML=filtered.map(e=>{
+    const realIdx=allE.indexOf(e);
+    const fn=allN.find(n=>n.id===e.from)?.name||e.from;
+    const tn=allN.find(n=>n.id===e.to)?.name||e.to;
+    return '<tr><td>'+esc(e.id)+'</td><td>'+esc(fn)+'</td><td>'+esc(tn)+'</td><td title="'+esc(e.component||'')+'">'+esc(e.component||'')+'</td><td><span class="ev '+(e.evidence==='BOM'?'ev-bom':'ev-est')+'">'+e.evidence+'</span></td><td title="'+esc(e.source_ref||'')+'">'+esc(e.source_ref||'')+'</td><td><button class="btn" onclick="editEdge('+realIdx+')">✎</button></td></tr>';
+  }).join('');
+  document.getElementById('e-count').textContent=filtered.length+' / '+allE.length+' relaciones';
+}
+
+// Clear filters
+document.getElementById('clear-n-filters').onclick=()=>{nFilters={};renderNTable()};
+document.getElementById('clear-e-filters').onclick=()=>{eFilters={};renderETable()};
+
+// === MODALS ===
 document.getElementById('add-node').onclick=()=>{editingNode=null;document.getElementById('m-node-title').textContent='Añadir nodo';['mn-id','mn-name','mn-country','mn-rev','mn-pi','mn-comp','mn-incl','mn-src','mn-notes'].forEach(x=>document.getElementById(x).value='');document.getElementById('mn-tier').value='1';document.getElementById('mn-type').value='Generalista';document.getElementById('mn-cur').value='EUR';document.getElementById('mn-del').style.display='none';document.getElementById('m-node').classList.add('on')};
 document.getElementById('mn-cancel').onclick=()=>document.getElementById('m-node').classList.remove('on');
 document.getElementById('mn-save').onclick=()=>{
