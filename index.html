@@ -110,6 +110,9 @@ tr:hover td{background:var(--hover)}
 <label>Facturación (M)</label><input id="mn-rev" type="number">
 <label>Moneda</label><select id="mn-cur"><option value="EUR">EUR</option><option value="USD">USD</option></select>
 <label>πVW (%)</label><input id="mn-pi" type="number" step="0.1">
+<label>Top client %</label><input id="mn-tcp" type="number" step="0.1">
+<label>HHI clientes (0-1)</label><input id="mn-hhi" type="number" step="0.01" min="0" max="1">
+<label>Fuente HHI</label><input id="mn-hhisrc">
 <label>Componentes</label><input id="mn-comp">
 <label>Incluye (M&A)</label><input id="mn-incl">
 <label>Fuente</label><input id="mn-src">
@@ -130,8 +133,8 @@ tr:hover td{background:var(--hover)}
 const C={Integrador:'var(--int)',Generalista:'var(--gen)',Especialista:'var(--esp)',JV:'var(--jv)',Filial:'var(--fil)'};
 const dark=matchMedia('(prefers-color-scheme:dark)').matches;
 const F={Integrador:dark?'#0c3a2a':'#e1f5ee',Generalista:dark?'#2a2660':'#eeedfe',Especialista:dark?'#4a1c0c':'#faece7',JV:dark?'#3d2a05':'#faeeda',Filial:dark?'#2a2a28':'#f1efe8'};
-const NCOLS=['id','name','tier','type','country','revenue','revenue_currency','pi_vw','components','includes','source','notes'];
-const NLABELS=['ID','Nombre','Tier','Tipo','País','Facturación','Moneda','πVW%','Componentes','Incluye','Fuente','Notas'];
+const NCOLS=['id','name','tier','type','country','revenue','revenue_currency','pi_vw','top_client_pct','client_hhi','components','includes','source','hhi_source','notes'];
+const NLABELS=['ID','Nombre','Tier','Tipo','País','Facturación','Moneda','πVW%','Top client %','HHI clientes','Componentes','Incluye','Fuente','Fuente HHI','Notas'];
 const ECOLS=['id','from','to','component','evidence','source_ref'];
 const ELABELS=['ID','Vendedor','Comprador','Componente','Evidencia','Fuente'];
 let allN=[],allE=[],sim,svg,gEl,linkG,nodeG,zm,editingNode=null,editingEdge=null;
@@ -297,16 +300,16 @@ document.getElementById('clear-n-filters').onclick=()=>{nFilters={};renderNTable
 document.getElementById('clear-e-filters').onclick=()=>{eFilters={};renderETable()};
 
 // === MODALS ===
-document.getElementById('add-node').onclick=()=>{editingNode=null;document.getElementById('m-node-title').textContent='Añadir nodo';['mn-id','mn-name','mn-country','mn-rev','mn-pi','mn-comp','mn-incl','mn-src','mn-notes'].forEach(x=>document.getElementById(x).value='');document.getElementById('mn-tier').value='1';document.getElementById('mn-type').value='Generalista';document.getElementById('mn-cur').value='EUR';document.getElementById('mn-del').style.display='none';document.getElementById('m-node').classList.add('on')};
+document.getElementById('add-node').onclick=()=>{editingNode=null;document.getElementById('m-node-title').textContent='Añadir nodo';['mn-id','mn-name','mn-country','mn-rev','mn-pi','mn-tcp','mn-hhi','mn-hhisrc','mn-comp','mn-incl','mn-src','mn-notes'].forEach(x=>document.getElementById(x).value='');document.getElementById('mn-tier').value='1';document.getElementById('mn-type').value='Generalista';document.getElementById('mn-cur').value='EUR';document.getElementById('mn-del').style.display='none';document.getElementById('m-node').classList.add('on')};
 document.getElementById('mn-cancel').onclick=()=>document.getElementById('m-node').classList.remove('on');
 document.getElementById('mn-save').onclick=()=>{
-  const o={id:document.getElementById('mn-id').value.trim(),name:document.getElementById('mn-name').value.trim(),tier:document.getElementById('mn-tier').value,type:document.getElementById('mn-type').value,country:document.getElementById('mn-country').value.trim().toUpperCase(),revenue:+document.getElementById('mn-rev').value||0,revenue_currency:document.getElementById('mn-cur').value,pi_vw:+document.getElementById('mn-pi').value||0,components:document.getElementById('mn-comp').value.trim(),includes:document.getElementById('mn-incl').value.trim(),source:document.getElementById('mn-src').value.trim(),notes:document.getElementById('mn-notes').value.trim()};
+  const o={id:document.getElementById('mn-id').value.trim(),name:document.getElementById('mn-name').value.trim(),tier:document.getElementById('mn-tier').value,type:document.getElementById('mn-type').value,country:document.getElementById('mn-country').value.trim().toUpperCase(),revenue:+document.getElementById('mn-rev').value||0,revenue_currency:document.getElementById('mn-cur').value,pi_vw:+document.getElementById('mn-pi').value||0,top_client_pct:+document.getElementById('mn-tcp').value||0,client_hhi:+document.getElementById('mn-hhi').value||0,hhi_source:document.getElementById('mn-hhisrc').value.trim(),components:document.getElementById('mn-comp').value.trim(),includes:document.getElementById('mn-incl').value.trim(),source:document.getElementById('mn-src').value.trim(),notes:document.getElementById('mn-notes').value.trim()};
   if(!o.id||!o.name){alert('ID y Nombre son obligatorios');return}
   if(editingNode!==null){allN[editingNode]=o}else{if(allN.some(n=>n.id===o.id)){alert('ID ya existe');return}allN.push(o)}
   document.getElementById('m-node').classList.remove('on');renderNTable();renderGraph();updateStats();
 };
 document.getElementById('mn-del').onclick=()=>{if(editingNode!==null&&confirm('¿Eliminar este nodo?')){const id=allN[editingNode].id;allN.splice(editingNode,1);allE=allE.filter(e=>e.from!==id&&e.to!==id);document.getElementById('m-node').classList.remove('on');renderNTable();renderGraph();updateStats()}};
-window.editNode=function(i){editingNode=i;const n=allN[i];document.getElementById('m-node-title').textContent='Editar: '+n.name;document.getElementById('mn-id').value=n.id;document.getElementById('mn-name').value=n.name;document.getElementById('mn-tier').value=n.tier;document.getElementById('mn-type').value=n.type;document.getElementById('mn-country').value=n.country||'';document.getElementById('mn-rev').value=n.revenue||'';document.getElementById('mn-cur').value=n.revenue_currency||'EUR';document.getElementById('mn-pi').value=n.pi_vw||'';document.getElementById('mn-comp').value=n.components||'';document.getElementById('mn-incl').value=n.includes||'';document.getElementById('mn-src').value=n.source||'';document.getElementById('mn-notes').value=n.notes||'';document.getElementById('mn-del').style.display='block';document.getElementById('m-node').classList.add('on')};
+window.editNode=function(i){editingNode=i;const n=allN[i];document.getElementById('m-node-title').textContent='Editar: '+n.name;document.getElementById('mn-id').value=n.id;document.getElementById('mn-name').value=n.name;document.getElementById('mn-tier').value=n.tier;document.getElementById('mn-type').value=n.type;document.getElementById('mn-country').value=n.country||'';document.getElementById('mn-rev').value=n.revenue||'';document.getElementById('mn-cur').value=n.revenue_currency||'EUR';document.getElementById('mn-pi').value=n.pi_vw||'';document.getElementById('mn-tcp').value=n.top_client_pct||'';document.getElementById('mn-hhi').value=n.client_hhi||'';document.getElementById('mn-hhisrc').value=n.hhi_source||'';document.getElementById('mn-comp').value=n.components||'';document.getElementById('mn-incl').value=n.includes||'';document.getElementById('mn-src').value=n.source||'';document.getElementById('mn-notes').value=n.notes||'';document.getElementById('mn-del').style.display='block';document.getElementById('m-node').classList.add('on')};
 
 function populateEdgeSelects(){const opts=allN.map(n=>'<option value="'+n.id+'">'+n.name+'</option>').join('');document.getElementById('me-from').innerHTML=opts;document.getElementById('me-to').innerHTML=opts}
 document.getElementById('add-edge').onclick=()=>{editingEdge=null;document.getElementById('m-edge-title').textContent='Añadir relación';populateEdgeSelects();['me-id','me-comp','me-src'].forEach(x=>document.getElementById(x).value='');document.getElementById('me-ev').value='EST';document.getElementById('me-del').style.display='none';document.getElementById('m-edge').classList.add('on')};
