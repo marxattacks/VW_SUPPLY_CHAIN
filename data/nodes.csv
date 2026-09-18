@@ -1,71 +1,71 @@
-id,name,tier,type,country,revenue,revenue_currency,pi_vw,components,includes,source,notes
-vw-ag,Volkswagen AG,0,Integrador,DE,324700,EUR,100,"Vehículos completos (9M/año)","Audi AG, Škoda, SEAT, Porsche, Lamborghini, Bentley, Cariad SE, Audi Hungaria, Kassel, VW Financial Services, Europcar",VW Group Annual Report 2024,"Integrador de sistemas. Concentra PI, plataformas MQB/SSP, gobernanza global"
-bosch,Robert Bosch,1,Generalista,DE,90500,EUR,,"Inyección, ABS/ESC, software chasis","ESMC (10%, JV con TSMC/NXP/Infineon)",Bosch Annual Report 2024; VW Group Award,"Mayor proveedor auto global. Privada. Aglomera pool de 7000+ especialistas"
-denso,Denso Corporation,1,Generalista,JP,47200,USD,13.5,"Electrónica motor, HVAC, sensores, semiconductores",,SEC XBRL 20-F (2017-2022); Denso Annual Report FY2024,"Toyota posee 25%. πVW 13-15% (SEC). Mantiene 4x más inventario para VW que para Toyota (AllAboutLean)"
-magna,Magna International,1,Generalista,CA,43000,USD,,"Carrocerías, powertrain, battery covers, espejos",,VW Group Award 2025 (Product),"Puede ensamblar vehículos completos (Magna Steyr)"
-continental,Continental AG,1,Generalista,DE,39700,EUR,,"Neumáticos, electrónica, software",,Continental Annual Report 2024,"Escisión Aumovio 2025. Cotiza: CON.DE"
-zf,ZF Friedrichshafen,1,Generalista,DE,38000,EUR,,"Transmisiones, chasis, seguridad activa, frenos","TRW (2015), WABCO (2020), Lucas",Literatura analizada (documento base),"Privada. Incluye Lucas TRW absorbida"
-aisin,Aisin Corporation,1,Generalista,JP,35000,USD,,"Transmisiones, frenos, carrocería",,Literatura sector automotriz,"Filial Toyota. Baja dependencia VW"
-forvia,Forvia / Faurecia,1,Generalista,FR,27000,EUR,,"Salpicaderos, control emisiones, iluminación","HELLA (2022)",Literatura analizada,"Cotiza. Incluye HELLA absorbida"
-valeo,Valeo,1,Generalista,FR,22000,EUR,,"Iluminación, sistemas térmicos, ADAS","FTE Automotive (frenos/embrague)",Literatura analizada,"Incluye FTE absorbida"
-lear,Lear Corporation,1,Generalista,US,22000,USD,,"Asientos, E-Systems",,Literatura analizada,"JIT/JIS directo a planta VW"
-motherson,Motherson Group,1,Generalista,IN,18000,USD,,"Bumpers, paneles puerta, cockpits, cableado, techos","SMP Deutschland, Yachiyo Industry (2024)","MarkLines ficha SMP Deutschland; VW Group exhibitions 2016","Cotiza NSE:MOTHERSON. VW es ~25-30% revenue. SMP provee bumper Passat, panel León, cockpit A7"
-adient,Adient,1,Generalista,US,14500,USD,,"Asientos automotrices",,Literatura analizada,"Ex-Johnson Controls. Mayor fab. asientos"
-plastic-omnium,Plastic Omnium,1,Generalista,FR,10000,EUR,,"Exteriores plásticos, sistemas energía",,Literatura analizada,"Cotiza"
-schaeffler,Schaeffler,2,Generalista,DE,16000,EUR,,"Rodamientos, transmisiones, chasis",,VW Group Award 2024 (Brands & Regions),"Generalista 2º orden. Cotiza SHA.DE"
-gestamp,Gestamp,2,Especialista,ES,13000,EUR,,"Estampación metálica, carrocería",,VW Group Award 2025 (People & Organization),"Cotiza BME:GEST"
-nemak,Nemak,2,Especialista,MX,5000,USD,13,"Bloques motor, culatas, battery housings (fundición aluminio)",,"MarkLines (3.0 TFSI V6); SEC XBRL 20-F (2017-2019)","Cotiza BMV:NEMAK. πVW 11-15%. Vende a Audi Hungaria"
-ronal,Ronal Group,1,Especialista,CH,2000,EUR,,"Llantas aleación",,"MarkLines; conocimiento directo","97% OEM. Privada. Provee llantas VW, Audi, BMW, Mercedes"
-infineon,Infineon Technologies,2,Especialista,DE,16000,EUR,,"Chips potencia, SiC, sensores",,VW Group Award; SEC filings,"13% auto semi share. Copropietario ESMC. Cotiza IFX.DE"
-nxp,NXP Semiconductors,2,Especialista,NL,12600,USD,,"MCUs automotrices",,Literatura analizada; SEC filings,"Copropietario ESMC. Cotiza NXPI"
-ti,Texas Instruments,2,Especialista,US,16000,USD,,"Analog/embedded semiconductors",,VW Group Award 2025 (Operational Excellence),"Cotiza TXN"
-stm,STMicroelectronics,2,Especialista,CH,13000,USD,,"MCUs, potencia",,Literatura analizada,"Revenue -23% en 2024. Cotiza STM"
-renesas,Renesas Electronics,2,Especialista,JP,12000,USD,,"MCUs/SoCs automotrices",,Literatura analizada,"7% auto semi share. Cotiza 6723.T"
-lg-es,LG Energy Solution,2,Especialista,KR,25000,USD,,"Celdas batería para MEB",,VW Group Award 2024 (Partnership),"Gigafactories. Cotiza 373220.KS"
-gotion,Gotion High-Tech,2,Especialista,CN,5000,USD,,"Celdas batería",,VW Group Award 2024 (Battery),"VW posee 26% participación directa"
-tsmc,TSMC,3,Especialista,TW,90000,USD,,"Obleas silicio, semiconductores (fundición)",,Literatura analizada,"Copropietario ESMC Dresden. CapEx >$30B/año. Cotiza TSM"
-audi-hungaria,Audi Hungaria Motor Kft.,0,Filial,HU,0,EUR,0,Motores completos para Audi/VW/SEAT/Škoda,,Managing the international value chain in the automotive industry,Mayor centro de producción de motores del mundo (Győr). Filial del Grupo VW
-skoda,Škoda Auto,0,Filial,CZ,0,EUR,0,Vehículos y componentes mecánicos compartidos,,Outsourcing in the automotive industry; Modularización Trayectorias...,Filial del Grupo. Plataformas compartidas
-seat,SEAT S.A.,0,Filial,ES,0,EUR,0,Automóviles y componentes estructurados,,Modularización Trayectorias...; 204-article-p171,Filial del Grupo
-cariad,Cariad SE / Cariad China,0,Filial,DE,0,EUR,0,"Software vehicular, conducción autónoma",,Valuación del Grupo Volkswagen,Filial tecnológica propia
-traton,TRATON Group,0,Filial,DE,0,EUR,0,"Vehículos comerciales pesados, autobuses","Scania, MAN, Navistar, VW Camiones y Ómnibus",Valuación del Grupo Volkswagen,Filial del Grupo
-man-power,MAN Power Engineering,0,Filial,DE,0,EUR,0,"Motores diésel gran diámetro, turbinas, turbocompresores",,Valuación del Grupo Volkswagen,Filial del Grupo
-vw-financial,VW Financial Services,0,Filial,DE,0,EUR,0,"Financiación, leasing, gestión flotas","VW Bank, VW Leasing, VW Credit",Valuación del Grupo Volkswagen,Filial financiera del Grupo
-europcar,Europcar,0,Filial,FR,0,EUR,0,"Movilidad, alquiler, suscripción vehicular",,Valuación del Grupo Volkswagen,Adquirida para integrar servicios de movilidad
-kassel,Planta de Kassel,0,Filial,DE,0,EUR,0,"Fundición aluminio, transmisiones, motores",,Volkswagen group supply chain analysis in Europe,Unidad interna de componentes
-puebla-motores,Planta de Motores de Puebla,0,Filial,MX,0,EUR,0,Motores exportados a plantas de VW (DE/ES/BR/CZ),,Modularización Trayectorias...,Unidad interna de componentes
-cordoba-transax,Planta MQ200 Córdoba / Transax,0,Filial,AR,0,EUR,0,"Transmisiones manuales, ejes, discos de freno",,Modularización Trayectorias...,Unidad interna de componentes
-brose-sitech,Brose Sitech,0,JV,DE,0,EUR,0,"Asientos completos, estructuras mecatrónicas",,Valuación del Grupo Volkswagen,JV 50% VW / 50% Brose
-delphi-aptiv,Delphi / Aptiv,1,Generalista,IE,14200,USD,0,"Arneses eléctricos, arquitecturas electrónicas, distribución energía",Delphi Technologies → BorgWarner (2020),Exploring the risks of value chain modularity; Modularización Trayectorias...,Cotiza APTV. Delphi Technologies escindida y absorbida por BorgWarner
-brose,Brose Fahrzeugteile,1,Especialista,DE,7000,EUR,0,"Módulos mecatrónicos puertas, elevadores cristales, pestillos",,Modularización Trayectorias...,Incluye Brose Puebla. Socio al 50% en Brose Sitech (JV con VW)
-sommer-allibert,Sommer Allibert,1,Especialista,FR,0,EUR,0,"Tableros instrumentos, consolas, recubrimientos interiores",,Modularización Trayectorias...,Histórico: ahora parte de Faurecia/Forvia
-vdo-siemens,VDO Kienzle / Siemens VDO,1,Especialista,DE,0,EUR,0,"Cabina integrada, instrumentos medición, navegación",,Outsourcing in the automotive industry; Modularización Trayectorias...,Histórico: ahora parte de Continental AG (Continental Automotive)
-gkn,GKN / Uni-Cardan,1,Especialista,GB,0,EUR,0,"Juntas velocidad constante (CVJ), transmisión de par",,Automotive global value chain - The rise of mega suppliers,Ahora parte de GKN Automotive (Melrose/Dowlais)
-ntn,NTN / NTN Antriebstechnik,2,Especialista,JP,6000,USD,0,"Rodamientos precisión, juntas homocinéticas",,Automotive global value chain - The rise of mega suppliers,Cotiza 6472.T
-iochpe-maxion,Iochpe-Maxion,1,Especialista,BR,2500,USD,0,"Chasis, bastidores, ruedas",,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende. Cotiza MYPK3.SA
-arvinmeritor,ArvinMeritor / Rockwell,1,Especialista,US,0,USD,0,"Suspensión, ejes mecánicos, frenos",,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende. Ahora Meritor (parte de Cummins 2022)
-tamet,Tamet,1,Especialista,BR,0,USD,0,"Estampación metálica, estructuras pesadas carrocería",,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende
-refa,Refa,2,Especialista,MX,0,USD,0,Componentes mecánicos alta precisión,,Modularización Trayectorias...,
-jiangsu-pacific,Jiangsu Pacific Precision Forging,2,Especialista,CN,0,USD,0,Piezas y engranajes forja precisión,,Volkswagen group supply chain analysis in Europe,
-mwm,MWM,1,Especialista,BR,0,USD,0,Motores diésel vehículos comerciales,,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende
-cummins,Cummins,1,Especialista,US,34000,USD,0,"Motores diésel alta potencia, propulsión",,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende. Cotiza CMI. Absorbió Meritor (2022)
-boysen,Friedrich Boysen GmbH,2,Especialista,DE,0,EUR,0,"Sistemas escape, colectores control emisiones",,Volkswagen group supply chain analysis in Europe,
-kautex,Kautex,1,Especialista,DE,0,EUR,0,Depósitos y sistemas plásticos combustible,,Modularización Trayectorias...,Filial de Textron
-bridgestone,Bridgestone,1,Especialista,JP,28000,USD,0,Neumáticos equipo original,,Outsourcing in the automotive industry; Modularización Trayectorias...,Cotiza 5108.T
-remon-borlen,Remon / Borlen,1,Especialista,BR,0,USD,0,"Ensamble ruedas, llantas, neumáticos montados",,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende
-vitro,Vitro,1,Especialista,MX,2200,USD,0,Parabrisas y cristales automotrices,,Modularización Trayectorias...,Cotiza VITROA.MX
-hella,Hella,1,Especialista,DE,8000,EUR,0,"Ópticas, faros, tecnología iluminación",,Modularización Trayectorias...,NOTA: Adquirida por Forvia en 2022. En fuentes históricas aparece independiente
-electro-optica,Electro Óptica,1,Especialista,MX,0,USD,0,"Radiadores, defensas, ópticas frontales",,Modularización Trayectorias...,
-autoliv,Autoliv,1,Especialista,SE,10400,USD,0,"Airbags, cinturones seguridad",,Modularización Trayectorias...,Cotiza ALV
-arneses-especiales,Arneses y Manufacturas Especiales,1,Especialista,MX,0,USD,0,Cableados y redes eléctricas,,Modularización Trayectorias...,
-harting,Harting Automobile GmbH,2,Especialista,DE,0,EUR,0,Cables y conectores alta tensión para carga eléctrica,,Volkswagen group supply chain analysis in Europe,
-samsung-sdi,Samsung SDI,2,Especialista,KR,15000,USD,0,Celdas y paquetes baterías ion-litio,,Relocation Standardization and Vertical Specialization; 204-article-p171,Cotiza 006400.KS
-panasonic-energy,Panasonic Energy,2,Especialista,JP,0,USD,0,Celdas baterías ion-litio,,Relocation Standardization and Vertical Specialization; 204-article-p171,Filial Panasonic Holdings
-byd,BYD,2,Especialista,CN,90000,USD,0,"Celdas baterías, vehículos eléctricos",,Relocation Standardization and Vertical Specialization; 204-article-p171,Cotiza 1211.HK. También competidor como OEM
-schenker,DB Schenker,1,Especialista,DE,20000,EUR,0,Logística ferroviaria componentes entre plantas,,Managing the international value chain in the automotive industry,Filial de Deutsche Bahn. 3PL
-rudolph,Rudolph Logistik Kft.,1,Especialista,HU,0,EUR,0,"Gestión interna almacén, suministro líneas producción",,Managing the international value chain in the automotive industry,Mantiene al fabricante libre de activos de manipulación
-seglo,SEGLO Logistics,1,Especialista,MX,0,USD,0,"Centros Multi JIT-JIS, subensambles externos, secuenciado",,Análisis de una cadena de suministro de autopartes,Alta dependencia VW
-eisenmann,Eisenmann,1,Especialista,DE,0,EUR,0,Pintura industrial carrocerías y cabinas,,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende
-karmann,Wilhelm Karmann GmbH,1,Especialista,DE,0,EUR,0,Manufactura por contrato: modelos convertibles,,Managing the international value chain in the automotive industry,Quebró 2009. Parte adquirida por VW
-siem-carriers,SIEM Car Carriers AS,1,Especialista,NO,0,EUR,0,Transporte marítimo vehículos terminados,,Volkswagen group supply chain analysis in Europe,
-enel,Enel,1,Especialista,IT,95000,EUR,0,Infraestructura redes puntos carga rápida,,Valuación del Grupo Volkswagen,Socio estratégico. Cotiza ENEL.MI
+id,name,tier,type,country,revenue,revenue_currency,pi_vw,components,includes,source,notes,top_client_pct,client_hhi,hhi_source
+vw-ag,Volkswagen AG,0,Integrador,DE,324700,EUR,100,Vehículos completos (9M/año),"Audi AG, Škoda, SEAT, Porsche, Lamborghini, Bentley, Cariad SE, Audi Hungaria, Kassel, VW Financial Services, Europcar",VW Group Annual Report 2024,"Integrador de sistemas. Concentra PI, plataformas MQB/SSP, gobernanza global",,,
+bosch,Robert Bosch,1,Generalista,DE,90500,EUR,,"Inyección, ABS/ESC, software chasis","ESMC (10%, JV con TSMC/NXP/Infineon)",Bosch Annual Report 2024; VW Group Award,Mayor proveedor auto global. Privada. Aglomera pool de 7000+ especialistas,,,
+denso,Denso Corporation,1,Generalista,JP,47200,USD,13.5,"Electrónica motor, HVAC, sensores, semiconductores",,SEC XBRL 20-F (2017-2022); Denso Annual Report FY2024,Toyota posee 25%. πVW 13-15% (SEC). Mantiene 4x más inventario para VW que para Toyota (AllAboutLean),50,,Denso Integrated Report FY2024: Toyota ~50% of sales
+magna,Magna International,1,Generalista,CA,43000,USD,,"Carrocerías, powertrain, battery covers, espejos",,VW Group Award 2025 (Product),Puede ensamblar vehículos completos (Magna Steyr),,,
+continental,Continental AG,1,Generalista,DE,39700,EUR,,"Neumáticos, electrónica, software",,Continental Annual Report 2024,Escisión Aumovio 2025. Cotiza: CON.DE,,,
+zf,ZF Friedrichshafen,1,Generalista,DE,38000,EUR,,"Transmisiones, chasis, seguridad activa, frenos","TRW (2015), WABCO (2020), Lucas",Literatura analizada (documento base),Privada. Incluye Lucas TRW absorbida,,,
+aisin,Aisin Corporation,1,Generalista,JP,35000,USD,,"Transmisiones, frenos, carrocería",,Literatura sector automotriz,Filial Toyota. Baja dependencia VW,,,
+forvia,Forvia / Faurecia,1,Generalista,FR,27000,EUR,,"Salpicaderos, control emisiones, iluminación",HELLA (2022),Literatura analizada,Cotiza. Incluye HELLA absorbida,,,
+valeo,Valeo,1,Generalista,FR,22000,EUR,,"Iluminación, sistemas térmicos, ADAS",FTE Automotive (frenos/embrague),Literatura analizada,Incluye FTE absorbida,,,
+lear,Lear Corporation,1,Generalista,US,22000,USD,,"Asientos, E-Systems",,Literatura analizada,JIT/JIS directo a planta VW,,,
+motherson,Motherson Group,1,Generalista,IN,18000,USD,,"Bumpers, paneles puerta, cockpits, cableado, techos","SMP Deutschland, Yachiyo Industry (2024)",MarkLines ficha SMP Deutschland; VW Group exhibitions 2016,"Cotiza NSE:MOTHERSON. VW es ~25-30% revenue. SMP provee bumper Passat, panel León, cockpit A7",30,,Estimaciones de mercado: VW ~25-30%
+adient,Adient,1,Generalista,US,14500,USD,,Asientos automotrices,,Literatura analizada,Ex-Johnson Controls. Mayor fab. asientos,,,
+plastic-omnium,Plastic Omnium,1,Generalista,FR,10000,EUR,,"Exteriores plásticos, sistemas energía",,Literatura analizada,Cotiza,,,
+schaeffler,Schaeffler,2,Generalista,DE,16000,EUR,,"Rodamientos, transmisiones, chasis",,VW Group Award 2024 (Brands & Regions),Generalista 2º orden. Cotiza SHA.DE,,,
+gestamp,Gestamp,2,Especialista,ES,13000,EUR,,"Estampación metálica, carrocería",,VW Group Award 2025 (People & Organization),Cotiza BME:GEST,,,
+nemak,Nemak,2,Especialista,MX,5000,USD,13,"Bloques motor, culatas, battery housings (fundición aluminio)",,MarkLines (3.0 TFSI V6); SEC XBRL 20-F (2017-2019),Cotiza BMV:NEMAK. πVW 11-15%. Vende a Audi Hungaria,18,,"SEC XBRL 20-F: GM 18%, Ford 14%, Daimler 11%, VW 11%"
+ronal,Ronal Group,1,Especialista,CH,2000,EUR,,Llantas aleación,,MarkLines; conocimiento directo,"97% OEM. Privada. Provee llantas VW, Audi, BMW, Mercedes",,,
+infineon,Infineon Technologies,2,Especialista,DE,16000,EUR,,"Chips potencia, SiC, sensores",,VW Group Award; SEC filings,13% auto semi share. Copropietario ESMC. Cotiza IFX.DE,,,
+nxp,NXP Semiconductors,2,Especialista,NL,12600,USD,,MCUs automotrices,,Literatura analizada; SEC filings,Copropietario ESMC. Cotiza NXPI,,,
+ti,Texas Instruments,2,Especialista,US,16000,USD,,Analog/embedded semiconductors,,VW Group Award 2025 (Operational Excellence),Cotiza TXN,,,
+stm,STMicroelectronics,2,Especialista,CH,13000,USD,,"MCUs, potencia",,Literatura analizada,Revenue -23% en 2024. Cotiza STM,,,
+renesas,Renesas Electronics,2,Especialista,JP,12000,USD,,MCUs/SoCs automotrices,,Literatura analizada,7% auto semi share. Cotiza 6723.T,,,
+lg-es,LG Energy Solution,2,Especialista,KR,25000,USD,,Celdas batería para MEB,,VW Group Award 2024 (Partnership),Gigafactories. Cotiza 373220.KS,,,
+gotion,Gotion High-Tech,2,Especialista,CN,5000,USD,,Celdas batería,,VW Group Award 2024 (Battery),VW posee 26% participación directa,,,
+tsmc,TSMC,3,Especialista,TW,90000,USD,,"Obleas silicio, semiconductores (fundición)",,Literatura analizada,Copropietario ESMC Dresden. CapEx >$30B/año. Cotiza TSM,,,
+audi-hungaria,Audi Hungaria Motor Kft.,0,Filial,HU,0,EUR,0,Motores completos para Audi/VW/SEAT/Škoda,,Managing the international value chain in the automotive industry,Mayor centro de producción de motores del mundo (Győr). Filial del Grupo VW,,,
+skoda,Škoda Auto,0,Filial,CZ,0,EUR,0,Vehículos y componentes mecánicos compartidos,,Outsourcing in the automotive industry; Modularización Trayectorias...,Filial del Grupo. Plataformas compartidas,,,
+seat,SEAT S.A.,0,Filial,ES,0,EUR,0,Automóviles y componentes estructurados,,Modularización Trayectorias...; 204-article-p171,Filial del Grupo,,,
+cariad,Cariad SE / Cariad China,0,Filial,DE,0,EUR,0,"Software vehicular, conducción autónoma",,Valuación del Grupo Volkswagen,Filial tecnológica propia,,,
+traton,TRATON Group,0,Filial,DE,0,EUR,0,"Vehículos comerciales pesados, autobuses","Scania, MAN, Navistar, VW Camiones y Ómnibus",Valuación del Grupo Volkswagen,Filial del Grupo,,,
+man-power,MAN Power Engineering,0,Filial,DE,0,EUR,0,"Motores diésel gran diámetro, turbinas, turbocompresores",,Valuación del Grupo Volkswagen,Filial del Grupo,,,
+vw-financial,VW Financial Services,0,Filial,DE,0,EUR,0,"Financiación, leasing, gestión flotas","VW Bank, VW Leasing, VW Credit",Valuación del Grupo Volkswagen,Filial financiera del Grupo,,,
+europcar,Europcar,0,Filial,FR,0,EUR,0,"Movilidad, alquiler, suscripción vehicular",,Valuación del Grupo Volkswagen,Adquirida para integrar servicios de movilidad,,,
+kassel,Planta de Kassel,0,Filial,DE,0,EUR,0,"Fundición aluminio, transmisiones, motores",,Volkswagen group supply chain analysis in Europe,Unidad interna de componentes,,,
+puebla-motores,Planta de Motores de Puebla,0,Filial,MX,0,EUR,0,Motores exportados a plantas de VW (DE/ES/BR/CZ),,Modularización Trayectorias...,Unidad interna de componentes,,,
+cordoba-transax,Planta MQ200 Córdoba / Transax,0,Filial,AR,0,EUR,0,"Transmisiones manuales, ejes, discos de freno",,Modularización Trayectorias...,Unidad interna de componentes,,,
+brose-sitech,Brose Sitech,0,JV,DE,0,EUR,0,"Asientos completos, estructuras mecatrónicas",,Valuación del Grupo Volkswagen,JV 50% VW / 50% Brose,,,
+delphi-aptiv,Delphi / Aptiv,1,Generalista,IE,14200,USD,0,"Arneses eléctricos, arquitecturas electrónicas, distribución energía",Delphi Technologies → BorgWarner (2020),Exploring the risks of value chain modularity; Modularización Trayectorias...,Cotiza APTV. Delphi Technologies escindida y absorbida por BorgWarner,,,
+brose,Brose Fahrzeugteile,1,Especialista,DE,7000,EUR,0,"Módulos mecatrónicos puertas, elevadores cristales, pestillos",,Modularización Trayectorias...,Incluye Brose Puebla. Socio al 50% en Brose Sitech (JV con VW),,,
+sommer-allibert,Sommer Allibert,1,Especialista,FR,0,EUR,0,"Tableros instrumentos, consolas, recubrimientos interiores",,Modularización Trayectorias...,Histórico: ahora parte de Faurecia/Forvia,,,
+vdo-siemens,VDO Kienzle / Siemens VDO,1,Especialista,DE,0,EUR,0,"Cabina integrada, instrumentos medición, navegación",,Outsourcing in the automotive industry; Modularización Trayectorias...,Histórico: ahora parte de Continental AG (Continental Automotive),,,
+gkn,GKN / Uni-Cardan,1,Especialista,GB,0,EUR,0,"Juntas velocidad constante (CVJ), transmisión de par",,Automotive global value chain - The rise of mega suppliers,Ahora parte de GKN Automotive (Melrose/Dowlais),,,
+ntn,NTN / NTN Antriebstechnik,2,Especialista,JP,6000,USD,0,"Rodamientos precisión, juntas homocinéticas",,Automotive global value chain - The rise of mega suppliers,Cotiza 6472.T,,,
+iochpe-maxion,Iochpe-Maxion,1,Especialista,BR,2500,USD,0,"Chasis, bastidores, ruedas",,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende. Cotiza MYPK3.SA,,,
+arvinmeritor,ArvinMeritor / Rockwell,1,Especialista,US,0,USD,0,"Suspensión, ejes mecánicos, frenos",,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende. Ahora Meritor (parte de Cummins 2022),,,
+tamet,Tamet,1,Especialista,BR,0,USD,0,"Estampación metálica, estructuras pesadas carrocería",,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende,,,
+refa,Refa,2,Especialista,MX,0,USD,0,Componentes mecánicos alta precisión,,Modularización Trayectorias...,,,,
+jiangsu-pacific,Jiangsu Pacific Precision Forging,2,Especialista,CN,0,USD,0,Piezas y engranajes forja precisión,,Volkswagen group supply chain analysis in Europe,,,,
+mwm,MWM,1,Especialista,BR,0,USD,0,Motores diésel vehículos comerciales,,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende,,,
+cummins,Cummins,1,Especialista,US,34000,USD,0,"Motores diésel alta potencia, propulsión",,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende. Cotiza CMI. Absorbió Meritor (2022),,,
+boysen,Friedrich Boysen GmbH,2,Especialista,DE,0,EUR,0,"Sistemas escape, colectores control emisiones",,Volkswagen group supply chain analysis in Europe,,,,
+kautex,Kautex,1,Especialista,DE,0,EUR,0,Depósitos y sistemas plásticos combustible,,Modularización Trayectorias...,Filial de Textron,,,
+bridgestone,Bridgestone,1,Especialista,JP,28000,USD,0,Neumáticos equipo original,,Outsourcing in the automotive industry; Modularización Trayectorias...,Cotiza 5108.T,,,
+remon-borlen,Remon / Borlen,1,Especialista,BR,0,USD,0,"Ensamble ruedas, llantas, neumáticos montados",,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende,,,
+vitro,Vitro,1,Especialista,MX,2200,USD,0,Parabrisas y cristales automotrices,,Modularización Trayectorias...,Cotiza VITROA.MX,,,
+hella,Hella,1,Especialista,DE,8000,EUR,0,"Ópticas, faros, tecnología iluminación",,Modularización Trayectorias...,NOTA: Adquirida por Forvia en 2022. En fuentes históricas aparece independiente,,,
+electro-optica,Electro Óptica,1,Especialista,MX,0,USD,0,"Radiadores, defensas, ópticas frontales",,Modularización Trayectorias...,,,,
+autoliv,Autoliv,1,Especialista,SE,10400,USD,0,"Airbags, cinturones seguridad",,Modularización Trayectorias...,Cotiza ALV,,,
+arneses-especiales,Arneses y Manufacturas Especiales,1,Especialista,MX,0,USD,0,Cableados y redes eléctricas,,Modularización Trayectorias...,,,,
+harting,Harting Automobile GmbH,2,Especialista,DE,0,EUR,0,Cables y conectores alta tensión para carga eléctrica,,Volkswagen group supply chain analysis in Europe,,,,
+samsung-sdi,Samsung SDI,2,Especialista,KR,15000,USD,0,Celdas y paquetes baterías ion-litio,,Relocation Standardization and Vertical Specialization; 204-article-p171,Cotiza 006400.KS,,,
+panasonic-energy,Panasonic Energy,2,Especialista,JP,0,USD,0,Celdas baterías ion-litio,,Relocation Standardization and Vertical Specialization; 204-article-p171,Filial Panasonic Holdings,,,
+byd,BYD,2,Especialista,CN,90000,USD,0,"Celdas baterías, vehículos eléctricos",,Relocation Standardization and Vertical Specialization; 204-article-p171,Cotiza 1211.HK. También competidor como OEM,,,
+schenker,DB Schenker,1,Especialista,DE,20000,EUR,0,Logística ferroviaria componentes entre plantas,,Managing the international value chain in the automotive industry,Filial de Deutsche Bahn. 3PL,,,
+rudolph,Rudolph Logistik Kft.,1,Especialista,HU,0,EUR,0,"Gestión interna almacén, suministro líneas producción",,Managing the international value chain in the automotive industry,Mantiene al fabricante libre de activos de manipulación,,,
+seglo,SEGLO Logistics,1,Especialista,MX,0,USD,0,"Centros Multi JIT-JIS, subensambles externos, secuenciado",,Análisis de una cadena de suministro de autopartes,Alta dependencia VW,,,
+eisenmann,Eisenmann,1,Especialista,DE,0,EUR,0,Pintura industrial carrocerías y cabinas,,Outsourcing in the automotive industry; Modularización Trayectorias...,Consorcio Modular Resende,,,
+karmann,Wilhelm Karmann GmbH,1,Especialista,DE,0,EUR,0,Manufactura por contrato: modelos convertibles,,Managing the international value chain in the automotive industry,Quebró 2009. Parte adquirida por VW,,,
+siem-carriers,SIEM Car Carriers AS,1,Especialista,NO,0,EUR,0,Transporte marítimo vehículos terminados,,Volkswagen group supply chain analysis in Europe,,,,
+enel,Enel,1,Especialista,IT,95000,EUR,0,Infraestructura redes puntos carga rápida,,Valuación del Grupo Volkswagen,Socio estratégico. Cotiza ENEL.MI,,,
